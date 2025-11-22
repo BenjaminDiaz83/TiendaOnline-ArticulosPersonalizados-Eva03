@@ -8,22 +8,12 @@ from .models import Product, categoryProduct, insumos, pedidos
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
 
-    list_display = (
-        'nombre',
-        'category',
-        'precio_base',
-        'display_thumbnail',
-    )
+    list_display = ('nombre','category','precio_base','display_thumbnail',)
     
 
-    list_filter = (
-        'category',
-    )
+    list_filter = ('category',)
     
-    search_fields = (
-        'nombre',
-        'description',
-    )
+    search_fields = ('nombre','description',)
     
 
     def display_thumbnail(self, obj):
@@ -37,7 +27,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     display_thumbnail.short_description = 'Imagen'
 
- 
+
 #admin de pedidos
 
 
@@ -62,7 +52,6 @@ class PedidosAdmin(admin.ModelAdmin):
         'fecha_creacion',
     )
     
-
     search_fields = (
         'nombre_cliente',
         'contacto',
@@ -70,16 +59,12 @@ class PedidosAdmin(admin.ModelAdmin):
         'token_Trakeo',
     )
     
-
     readonly_fields = ('fecha_creacion', 'token_Trakeo')
 
 
 #admin de insumos
-
-
 @admin.register(insumos)
 class InsumosAdmin(admin.ModelAdmin):
-
     list_display = (
         'name',
         'tipo',
@@ -89,24 +74,12 @@ class InsumosAdmin(admin.ModelAdmin):
         'color',
     )
     
-
-    list_filter = (
-        'tipo',
-        'marca',
-        'color',
-    )
+    list_filter = ('tipo','marca','color',)
     
-
-    search_fields = (
-        'name',
-        'tipo',
-        'marca',
-    )
+    search_fields = ('name','tipo','marca',)
 
 
 #categoria
-
-
 @admin.register(categoryProduct)
 class CategoryProductAdmin(admin.ModelAdmin):
 
