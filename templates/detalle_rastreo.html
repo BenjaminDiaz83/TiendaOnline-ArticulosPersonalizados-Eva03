@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{{ titulo }}</h1>
+    
+    <div class="row g-4">
+        <div class="col-md-5">
+            <div class="card text-white bg-primary shadow-lg h-100">
+                <div class="card-body">
+                    <h2 class="card-title display-5 mb-3"><i class="bi bi-clock-history"></i> Estado Actual</h2>
+                    
+                    <p class="fs-4 mb-2">Pedido:</p>
+                    <span class="badge bg-success fs-5">{{ pedido.get_estados_display }}</span>
+
+                    <hr class="my-3 border-light">
+
+                    <p class="fs-4 mb-2">Pago:</p>
+                    {% with estado_pago=pedido.estado_pago %}
+                        <span class="badge fs-5 
+                            {% if estado_pago == 'pendiente' %}bg-danger{% elif estado_pago == 'parcial' %}bg-warning text-dark{% else %}bg-info{% endif %}">
+                            {{ pedido.get_estado_pago_display }}
+                        </span>
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h2 class="card-title h4 mb-3"><i class="bi bi-info-circle"></i> Datos Básicos del Pedido</h2>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong>Token de Seguimiento:</strong> <code class="text-primary">{{ pedido.token_Trakeo }}</code></li>
+                        <li class="list-group-item"><strong>Cliente:</strong> {{ pedido.nombre_cliente }}</li>
+                        <li class="list-group-item"><strong>Contacto:</strong> {{ pedido.contacto }}</li>
+                        <li class="list-group-item"><strong>Fecha Solicitud:</strong> {{ pedido.fecha_creacion|date:"d M Y H:i" }}</li>
+                        <li class="list-group-item"><strong>Solicitado desde:</strong> {{ pedido.get_plataforma_display }}</li>
+                        {% if pedido.fecha_entrega %}
+                            <li class="list-group-item text-danger"><strong>Fecha de Entrega Solicitada:</strong> {{ pedido.fecha_entrega|date:"d M Y" }}</li>
+                        {% endif %}
+                        <li class="list-group-item">
+                            <strong>Producto Ref.:</strong> 
+                            {% if pedido.producto_ref %}
+                                <a href="{% url 'detalle_producto' pedido.producto_ref.pk %}" class="text-success">{{ pedido.producto_ref.nombre }}</a>
+                            {% else %}
+                                Personalizado
+                            {% endif %}
+                        </li>
+                    </ul>
+
+                    <h5 class="mt-4"><i class="bi bi-link-45deg"></i> URL de Seguimiento</h5>
+                    <div class="alert alert-secondary p-2 small">
+                        Guarda este enlace para un seguimiento rápido:
+                        <a href="{{ tracking_url }}" class="d-block text-break">{{ tracking_url }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <h3 class="h4"><i class="bi bi-chat-left-text"></i> Descripción y Referencia</h3>
+        <p class="alert alert-light border shadow-sm p-3">{{ pedido.descripcion|linebreaksbr }}</p>
+    </div>
+
+    <div class="mt-4">
+        <h3 class="h4"><i class="bi bi-image"></i> Imagen de Referencia</h3>
+        <div class="text-center p-3 border rounded">
+            {% if pedido.imagen %}
+                <img src="{{ pedido.imagen.url }}" alt="Imagen de Referencia" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
+            {% else %}
+                <p class="text-muted">No se adjuntó imagen de referencia en la solicitud.</p>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="mt-5">
+        <a href="{% url 'home' %}" class="btn btn-outline-primary"><i class="bi bi-house"></i> Volver al Inicio</a>
+    </div>
+{% endblock %}

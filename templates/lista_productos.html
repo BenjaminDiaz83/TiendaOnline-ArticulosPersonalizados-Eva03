@@ -1,0 +1,94 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{{ titulo }}</h1>
+    
+    <a href="{% url 'rastreo_form' %}" class="btn btn-primary btn-lg mb-4 shadow-sm">
+        <i class="bi bi-box-seam"></i> Rastrear mi Pedido
+    </a>
+    
+    <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+            <h2 class="h5"><i class="bi bi-search"></i> Buscar Productos</h2>
+            <form method="get" action="{% url 'home' %}" class="d-flex">
+                <input type="text" name="q" placeholder="Nombre o descripción..." value="{{ query|default:'' }}" class="form-control me-2">
+                <button type="submit" class="btn btn-secondary"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <h2 class="h5"><i class="bi bi-tags"></i> Filtrar por Categoría</h2>
+            <form method="get" action="{% url 'home' %}" class="d-flex align-items-center">
+                <select name="categoria" onchange="this.form.submit()" class="form-select me-2">
+                    <option value="">Todas las Categorías</option>
+                    {% for cat in categorias %}
+                        <option value="{{ cat.id }}" {% if cat.id|stringformat:"s" == categoria_seleccionada_id %}selected{% endif %}>
+                            {{ cat.nombre }}
+                        </option>
+                    {% endfor %}
+                </select>
+                {% if categoria_seleccionada_id or query %}
+                    <a href="{% url 'home' %}" class="btn btn-outline-danger btn-sm text-nowrap"><i class="bi bi-x-circle"></i> Limpiar</a>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+    
+    <hr class="my-4">
+    
+    {% if not categoria_seleccionada_id and not query and destacados %}
+        <h2 class="h4 text-warning mb-3"><i class="bi bi-star-fill"></i> Productos Destacados</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+            {% for producto in destacados %}
+                <div class="col">
+                    <div class="card h-100 border-warning shadow-lg">
+                        {% if producto.imagen1 %}
+                            <img src="{{ producto.imagen1.url }}" class="card-img-top" alt="{{ producto.nombre }}" style="height: 200px; object-fit: cover;">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">{{ producto.nombre }}</h5>
+                            <p class="card-text"><strong>Precio Base:</strong> <span class="text-success">${{ producto.precio_base }}</span></p>
+                            <a href="{% url 'detalle_producto' producto.pk %}" class="btn btn-warning btn-sm"><i class="bi bi-eye"></i> Ver Detalle</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <hr class="my-4">
+    {% endif %}
+
+    <h2 class="h4 mb-3">
+        <i class="bi bi-box"></i> Productos 
+        {% if query %} 
+            <small class="text-muted">(Resultados para "{{ query }}")</small>
+        {% endif %}
+    </h2>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for producto in productos %}
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    {% if producto.imagen1 %}
+                        <img src="{{ producto.imagen1.url }}" class="card-img-top" alt="{{ producto.nombre }}" style="height: 250px; object-fit: cover;">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ producto.nombre }}</h5>
+                        <p class="card-text mb-1"><small class="text-muted">Categoría: {{ producto.category.nombre }}</small></p>
+                        <p class="card-text fs-5"><strong>Precio Base:</strong> <span class="text-success">${{ producto.precio_base }}</span></p>
+                        <a href="{% url 'detalle_producto' producto.pk %}" class="btn btn-primary"><i class="bi bi-info-circle"></i> Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info" role="alert">
+                    <i class="bi bi-info-circle-fill"></i> No se encontraron productos con estos criterios.
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,22 +1,36 @@
-from django import forms
-from .models import pedidos
 
-class PedidoForm(forms.ModelForm):
-    imagenes_referencia = forms.FileField(
-        widget=forms.ClearableFileInput(attrs={'multiple': True}),
+from django import forms
+from .models import pedidos, Product
+
+class SolicitudPedidoForm(forms.ModelForm):
+    imagen = forms.ImageField(
+        label="Sube una imagen de referencia (Máximo 1)", 
+        required=False 
+    ) 
+
+    nombre_cliente = forms.CharField(label="Tu Nombre")
+    contacto = forms.CharField(label="Email, Teléfono y/o Red Social")
+    descripcion = forms.CharField(
+        label="Descripción de lo solicitado", 
+        widget=forms.Textarea
+    )
+    
+    producto_ref = forms.ModelChoiceField(
+        queryset=Product.objects.all(),
         required=False,
-        label="Imágenes de referencia"
+        widget=forms.HiddenInput()
     )
 
     class Meta:
         model = pedidos
-        fields = ['nombre_cliente', 'contacto', 'producto_ref', 'descripcion', 'fecha_entrega', 'imagenes_referencia']
+        fields = [
+            'nombre_cliente', 
+            'contacto', 
+            'producto_ref', 
+            'descripcion', 
+            'imagen', 
+            'fecha_entrega',
+        ]
         widgets = {
             'fecha_entrega': forms.DateInput(attrs={'type': 'date'}),
         }
-
-    def clean_imagenes_referencia(self):
-        files = self.files.getlist('imagenes_referencia')
-        if len(files) > 3:
-            raise forms.ValidationError("Solo puedes subir hasta 3 imágenes.")
-        return files
