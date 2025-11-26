@@ -4,7 +4,7 @@ from .models import pedidos, Product
 
 class SolicitudPedidoForm(forms.ModelForm):
     imagen = forms.ImageField(
-        label="Sube una imagen de referencia (Máximo 1)", 
+        label="Sube una imagen de referencia", 
         required=False 
     ) 
 

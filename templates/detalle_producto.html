@@ -1,85 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
-{% load widget_tweaks %}
-{% block title %}{{ titulo }}{% endblock %}
+
+{% block title %}{{ producto.nombre }}{% endblock %}
 
 {% block content %}
-    <h1 class="mb-4">{{ producto.nombre }}</h1>
-    
-    <div class="card shadow-sm mb-4">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h5 class="card-subtitle mb-3 text-muted">Imágenes de Referencia</h5>
-                    <div class="row row-cols-3 g-2">
-                        {% if producto.imagen1 %}
-                            <div class="col"><img src="{{ producto.imagen1.url }}" class="img-fluid rounded shadow-sm" alt="{{ producto.nombre }} 1"></div>
-                        {% endif %}
-                        {% if producto.imagen2 %}
-                            <div class="col"><img src="{{ producto.imagen2.url }}" class="img-fluid rounded shadow-sm" alt="{{ producto.nombre }} 2"></div>
-                        {% endif %}
-                        {% if producto.imagen3 %}
-                            <div class="col"><img src="{{ producto.imagen3.url }}" class="img-fluid rounded shadow-sm" alt="{{ producto.nombre }} 3"></div>
-                        {% endif %}
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <h3 class="display-6 text-success">${{ producto.precio_base }}</h3>
-                    <p class="text-muted">Precio Base</p>
+    <h1 class="mb-4"><i class="bi bi-box-seam"></i> {{ producto.nombre }}</h1>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 p-3 bg-light d-flex align-items-center justify-content-center">
+                {% if producto.imagen1 %}
+                    <img src="{{ producto.imagen1.url }}" class="img-fluid rounded" alt="{{ producto.nombre }}" style="max-height: 400px; object-fit: contain;">
+                {% else %}
+                    <p class="text-muted">No hay imagen disponible.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h2 class="display-6 text-success mb-3">
+                        <i class="bi bi-cash-stack me-2"></i> ${{ producto.precio_base }}
+                    </h2>
                     
-                    <h5 class="mt-4"><i class="bi bi-file-text"></i> Descripción</h5>
+                    <hr>
+
+                    <h4 class="mt-4 mb-2"><i class="bi bi-file-text"></i> Descripción General</h4>
                     <p class="text-break">{{ producto.description|linebreaksbr }}</p>
+                    
+                    <hr>
+
+                    <div class="d-grid mt-4">
+                        <a href="{% url 'solicitar_producto' producto.pk %}" class="btn btn-success btn-lg shadow-lg">
+                            <i class="bi bi-cart-fill"></i> Solicitar Producto
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <hr class="my-4">
-    
-    <div class="card bg-light p-4 shadow-sm">
-        <h2 class="card-title h4 text-primary mb-3"><i class="bi bi-patch-plus"></i> Solicitar este Producto</h2>
-        
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            
-            {% if form.non_field_errors %}
-                <div class="alert alert-danger">{{ form.non_field_errors }}</div>
-            {% endif %}
-            
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label for="{{ form.nombre_cliente.id_for_label }}" class="form-label">{{ form.nombre_cliente.label }}</label>
-                    {{ form.nombre_cliente|add_class:"form-control" }}
-                </div>
-                <div class="col-md-6">
-                    <label for="{{ form.contacto.id_for_label }}" class="form-label">{{ form.contacto.label }} (Email, Teléfono y/o Red Social)</label>
-                    {{ form.contacto|add_class:"form-control" }}
-                </div>
-                <div class="col-md-4">
-                    <label for="{{ form.fecha_entrega.id_for_label }}" class="form-label">{{ form.fecha_entrega.label }} (Opcional)</label>
-                    {{ form.fecha_entrega|add_class:"form-control" }}
-                </div>
-                <div class="col-md-8">
-                    <label for="{{ form.imagen.id_for_label }}" class="form-label">{{ form.imagen.label }}</label>
-                    {{ form.imagen|add_class:"form-control" }}
-                </div>
-                <div class="col-12">
-                    <label for="{{ form.descripcion.id_for_label }}" class="form-label">{{ form.descripcion.label }}</label>
-                    {{ form.descripcion|add_class:"form-control" }}
-                </div>
-            </div>
-            
-            {{ form.producto_ref }}
-            
-            <div class="mt-4">
-                <button type="submit" class="btn btn-success btn-lg"><i class="bi bi-send-fill"></i> Enviar Solicitud</button>
-            </div>
-        </form>
+    <div class="mt-5">
+        <a href="{% url 'home' %}" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Volver al Catálogo</a>
     </div>
-    
-    <div class="mt-3">
-        <a href="{% url 'home' %}" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Volver al Catálogo</a>
-    </div>
-
 {% endblock %}

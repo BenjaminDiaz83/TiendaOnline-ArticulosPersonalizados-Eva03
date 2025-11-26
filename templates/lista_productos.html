@@ -7,12 +7,12 @@
     <h1 class="mb-4">{{ titulo }}</h1>
     
     <a href="{% url 'rastreo_form' %}" class="btn btn-primary btn-lg mb-4 shadow-sm">
-        <i class="bi bi-box-seam"></i> Rastrear mi Pedido
+        Rastrear mi Pedido
     </a>
     
     <div class="row mb-4">
         <div class="col-md-6 mb-3">
-            <h2 class="h5"><i class="bi bi-search"></i> Buscar Productos</h2>
+            <h2 class="h5">Buscar Productos</h2>
             <form method="get" action="{% url 'home' %}" class="d-flex">
                 <input type="text" name="q" placeholder="Nombre o descripción..." value="{{ query|default:'' }}" class="form-control me-2">
                 <button type="submit" class="btn btn-secondary"><i class="bi bi-search"></i></button>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="col-md-6 mb-3">
-            <h2 class="h5"><i class="bi bi-tags"></i> Filtrar por Categoría</h2>
+            <h2 class="h5"> Filtrar por Categoría</h2>
             <form method="get" action="{% url 'home' %}" class="d-flex align-items-center">
                 <select name="categoria" onchange="this.form.submit()" class="form-select me-2">
                     <option value="">Todas las Categorías</option>

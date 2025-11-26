@@ -1,8 +1,7 @@
-from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from django.urls import reverse
-from .models import Product, categoryProduct, pedidos, insumos
+from .models import pedidos, Product, categoryProduct, insumos
 from .forms import SolicitudPedidoForm
 from django.contrib import messages
 
@@ -11,8 +10,6 @@ def lista_productos(request):
     
     categorias = categoryProduct.objects.all()
     productos = Product.objects.all()
-    
-    
     destacados = Product.objects.filter(destacado=True)
     
     
@@ -42,7 +39,21 @@ def lista_productos(request):
 
 
 def detalle_producto(request, pk):
-    """Muestra el detalle del producto y permite crear un nuevo pedido."""
+    """Muestra solo el detalle del producto, con un botón para la solicitud."""
+    
+    producto = get_object_or_404(Product, pk=pk)
+    
+    context = {
+        'producto': producto,
+        'titulo': f'Detalle: {producto.nombre}',
+    }
+    
+    
+    return render(request, 'detalle_producto.html', context)
+
+
+def solicitar_producto_form(request, pk):
+    """Nueva vista dedicada a manejar el formulario de solicitud de pedido."""
     
     producto = get_object_or_404(Product, pk=pk)
     
@@ -59,23 +70,27 @@ def detalle_producto(request, pk):
             
             nuevo_pedido.save()
             
-            
             messages.success(request, f'¡Pedido creado con éxito! Tu código de rastreo es: {nuevo_pedido.token_Trakeo}')
+            
             
             return redirect('detalle_rastreo', token=nuevo_pedido.token_Trakeo)
     else:
-        initial_data = {'producto_ref': producto}
+        
+        initial_data = {
+            'producto_ref': producto,
+            
+            'descripcion': f'Solicitud basada en el producto: {producto.nombre}',
+        }
         form = SolicitudPedidoForm(initial=initial_data)
 
     context = {
         'producto': producto,
         'form': form,
-        'titulo': f'Detalle: {producto.nombre}',
+        'titulo': f'Solicitar: {producto.nombre}',
     }
     
-    return render(request, 'detalle_producto.html', context)
-
-
+    
+    return render(request, 'solicitar_producto_form.html', context)
 
 def rastreo_pedido_form(request):
     """Muestra el formulario para ingresar el token de rastreo."""
@@ -98,9 +113,10 @@ def rastreo_pedido_form(request):
 def detalle_rastreo(request, token):
     """Muestra el estado de un pedido usando el token de Trakeo (UUID)."""
     
+    
     pedido = get_object_or_404(pedidos, token_Trakeo=token) 
     
-    
+
     tracking_url = request.build_absolute_uri(reverse('detalle_rastreo', args=[pedido.token_Trakeo]))
     
     context = {
@@ -110,7 +126,6 @@ def detalle_rastreo(request, token):
     }
     
     return render(request, 'detalle_rastreo.html', context)
-
 
 
 def lista_insumos(request):

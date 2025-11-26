@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="mb-4"><i class="bi bi-cart-fill"></i> {{ titulo }}</h1>
+            <p class="text-muted">Completa el siguiente formulario para iniciar tu pedido basado en **{{ producto.nombre }}**.</p>
+            <hr>
+
+            <form method="post" enctype="multipart/form-data" class="card p-4 shadow-lg">
+                {% csrf_token %}
+                
+                <h3 class="h5 mb-3"><i class="bi bi-person-lines-fill"></i> Datos del Solicitante</h3>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="{{ form.nombre_cliente.id_for_label }}" class="form-label">Nombre del Cliente (Requerido)</label>
+                        {{ form.nombre_cliente|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-6">
+                        <label for="{{ form.contacto.id_for_label }}" class="form-label">Contacto (Email o Teléfono)</label>
+                        {{ form.contacto|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <h3 class="h5 mb-3"><i class="bi bi-journal-text"></i> Detalles del Pedido</h3>
+                
+                <div class="mb-3">
+                    <label for="{{ form.descripcion.id_for_label }}" class="form-label">Descripción Detallada de la Solicitud (Requerido)</label>
+                    {{ form.descripcion|add_class:"form-control"|attr:"rows:5" }}
+                </div>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="{{ form.fecha_entrega.id_for_label }}" class="form-label">Fecha de Entrega Deseada (Opcional)</label>
+                        {{ form.fecha_entrega|add_class:"form-control"|attr:"type:date" }}
+                    </div>
+                    <div class="col-md-6">
+                        <label for="{{ form.plataforma.id_for_label }}" class="form-label">Plataforma de Solicitud</label>
+                        {{ form.plataforma|add_class:"form-select" }}
+                    </div>
+                </div>
+                
+                <h3 class="h5 mb-3"><i class="bi bi-file-earmark-image"></i> Archivos Adicionales</h3>
+                <div class="mb-4">
+                    <label for="{{ form.imagen.id_for_label }}" class="form-label">Imagen/Boceto de Referencia (Opcional)</label>
+                    {{ form.imagen|add_class:"form-control" }}
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg mt-3"><i class="bi bi-send-fill"></i> Confirmar Solicitud</button>
+                    <a href="{% url 'detalle_producto' producto.pk %}" class="btn btn-outline-secondary mt-2">
+                        <i class="bi bi-arrow-left"></i> Volver al Detalle
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
