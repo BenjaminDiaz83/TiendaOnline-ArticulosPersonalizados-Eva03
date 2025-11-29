@@ -11,7 +11,7 @@ class Product(models.Model):
     imagen1 = models.ImageField(upload_to='imagenes_productos/', blank=True, null=True)
     imagen2 = models.ImageField(upload_to='imagenes_productos/', blank=True, null=True)
     imagen3 = models.ImageField(upload_to='imagenes_productos/', blank=True, null=True)
-
+    destacado = models.BooleanField(default=False)
     def __str__(self):
         return self.nombre
 
