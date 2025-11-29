@@ -28,9 +28,12 @@ class SolicitudPedidoForm(forms.ModelForm):
             'contacto', 
             'producto_ref', 
             'descripcion', 
-            'imagen', 
             'fecha_entrega',
-            'plataforma'
+            'plataforma',
+            'imagen_ref1',
+            'imagen_ref2',
+            'imagen_ref3',
+
         ]
         widgets = {
             'fecha_entrega': forms.DateInput(attrs={'type': 'date'}),

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}{{ titulo }}{% endblock %}
 
@@ -67,16 +68,43 @@
     </div>
 
     <div class="mt-4">
-        <h3 class="h4"> Imagen de Referencia</h3>
+        <h3 class="h4"> Imágenes de Referencia</h3>
         <div class="text-center p-3 border rounded">
-            {% if pedido.imagen %}
-                <img src="{{ pedido.imagen.url }}" alt="Imagen de Referencia" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
-            {% else %}
-                <p class="text-muted">No se adjuntó imagen de referencia en la solicitud.</p>
-            {% endif %}
+            
+            {% with img1=pedido.imagen_ref1 img2=pedido.imagen_ref2 img3=pedido.imagen_ref3 %}
+                
+                {% if img1 or img2 or img3 %}
+                    <div class="row g-3 justify-content-center">
+                        
+                        {% if img1 %}
+                            <div class="col-md-4 col-sm-6">
+                                <img src="{{ img1.url }}" alt="Referencia 1" class="img-fluid rounded shadow-sm" style="max-height: 250px;">
+                                <p class="text-center mt-1 text-muted small">Referencia 1</p>
+                            </div>
+                        {% endif %}
+                        
+                        {% if img2 %}
+                            <div class="col-md-4 col-sm-6">
+                                <img src="{{ img2.url }}" alt="Referencia 2" class="img-fluid rounded shadow-sm" style="max-height: 250px;">
+                                <p class="text-center mt-1 text-muted small">Referencia 2</p>
+                            </div>
+                        {% endif %}
+                        
+                        {% if img3 %}
+                            <div class="col-md-4 col-sm-6">
+                                <img src="{{ img3.url }}" alt="Referencia 3" class="img-fluid rounded shadow-sm" style="max-height: 250px;">
+                                <p class="text-center mt-1 text-muted small">Referencia 3</p>
+                            </div>
+                        {% endif %}
+                        
+                    </div>
+                {% else %}
+                    <p class="text-muted">No se adjuntó imagen de referencia en la solicitud.</p>
+                {% endif %}
+
+            {% endwith %}
         </div>
     </div>
-    
     <div class="mt-5">
         <a href="{% url 'home' %}" class="btn btn-outline-primary"> Volver al Inicio</a>
     </div>

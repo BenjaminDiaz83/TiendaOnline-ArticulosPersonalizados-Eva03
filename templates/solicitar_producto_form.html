@@ -44,12 +44,19 @@
                     </div>
                 </div>
                 
-                <h3 class="h5 mb-3"> Archivos Adicionales</h3>
-                <div class="mb-4">
-                    <label for="{{ form.imagen.id_for_label }}" class="form-label">Imagen/Boceto de Referencia (Opcional)</label>
-                    {{ form.imagen|add_class:"form-control" }}
+                <h3 class="h5 mb-3"> Archivos Adicionales (Máximo 3 Referencias) </h3>
+                <div class="mb-3">
+                    <label for="{{ form.imagen_ref1.id_for_label }}" class="form-label"> Imagen de Referencia 1 (Opcional)</label>
+                    {{ form.imagen_ref1|add_class:"form-control" }}
                 </div>
-
+                <div class="mb-3">
+                    <label for="{{ form.imagen_ref2.id_for_label }}" class="form-label"> Imagen de Referencia 2 (Opcional)</label>
+                    {{ form.imagen_ref2|add_class:"form-control" }}
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.imagen_ref3.id_for_label }}" class="form-label"> Imagen de Referencia 3 (Opcional)</label>
+                    {{ form.imagen_ref3|add_class:"form-control" }}
+                </div>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-primary btn-lg mt-3"> Confirmar Solicitud</button>
                     <a href="{% url 'detalle_producto' producto.pk %}" class="btn btn-outline-secondary mt-2">

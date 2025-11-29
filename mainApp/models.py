@@ -63,6 +63,10 @@ class pedidos(models.Model):
     descripcion = models.TextField()
 
     imagen = models.ImageField(upload_to='imagenes_pedidos/', blank=True, null=True)
+
+    imagen_ref1 = models.ImageField(upload_to='imagenes_pedidos/', blank=True, null=True, verbose_name="Imagen de referencia 1")
+    imagen_ref2 = models.ImageField(upload_to='imagenes_pedidos/', blank=True, null=True, verbose_name="Imagen de referencia 2")
+    imagen_ref3 = models.ImageField(upload_to='imagenes_pedidos/', blank=True, null=True, verbose_name="Imagen de referencia 3")
     imagenes_referencia = models.JSONField(default=list, blank=True, null=True)  # Para múltiples imágenes de referencia
 
     fecha_creacion = models.DateTimeField(auto_now_add=True)
