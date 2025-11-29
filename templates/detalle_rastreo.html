@@ -7,9 +7,9 @@
     
     <div class="row g-4">
         <div class="col-md-5">
-            <div class="card text-white bg-primary shadow-lg h-100">
+            <div class="card text-white bg-secondary shadow-lg h-100">
                 <div class="card-body">
-                    <h2 class="card-title display-5 mb-3"><i class="bi bi-clock-history"></i> Estado Actual</h2>
+                    <h2 class="card-title display-5 mb-3"> Estado Actual</h2>
                     
                     <p class="fs-4 mb-2">Pedido:</p>
                     <span class="badge bg-success fs-5">{{ pedido.get_estados_display }}</span>
@@ -30,7 +30,7 @@
         <div class="col-md-7">
             <div class="card shadow-sm h-100">
                 <div class="card-body">
-                    <h2 class="card-title h4 mb-3"><i class="bi bi-info-circle"></i> Datos Básicos del Pedido</h2>
+                    <h2 class="card-title h4 mb-3"> Datos Básicos del Pedido</h2>
                     
                     <ul class="list-group list-group-flush mb-4">
                         <li class="list-group-item"><strong>Token de Seguimiento:</strong> <code class="text-primary">{{ pedido.token_Trakeo }}</code></li>
@@ -51,7 +51,7 @@
                         </li>
                     </ul>
 
-                    <h5 class="mt-4"><i class="bi bi-link-45deg"></i> URL de Seguimiento</h5>
+                    <h5 class="mt-4"> URL de Seguimiento</h5>
                     <div class="alert alert-secondary p-2 small">
                         Guarda este enlace para un seguimiento rápido:
                         <a href="{{ tracking_url }}" class="d-block text-break">{{ tracking_url }}</a>
@@ -62,12 +62,12 @@
     </div>
     
     <div class="mt-4">
-        <h3 class="h4"><i class="bi bi-chat-left-text"></i> Descripción y Referencia</h3>
+        <h3 class="h4"> Descripción y Referencia</h3>
         <p class="alert alert-light border shadow-sm p-3">{{ pedido.descripcion|linebreaksbr }}</p>
     </div>
 
     <div class="mt-4">
-        <h3 class="h4"><i class="bi bi-image"></i> Imagen de Referencia</h3>
+        <h3 class="h4"> Imagen de Referencia</h3>
         <div class="text-center p-3 border rounded">
             {% if pedido.imagen %}
                 <img src="{{ pedido.imagen.url }}" alt="Imagen de Referencia" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
@@ -78,6 +78,6 @@
     </div>
     
     <div class="mt-5">
-        <a href="{% url 'home' %}" class="btn btn-outline-primary"><i class="bi bi-house"></i> Volver al Inicio</a>
+        <a href="{% url 'home' %}" class="btn btn-outline-primary"> Volver al Inicio</a>
     </div>
 {% endblock %}
