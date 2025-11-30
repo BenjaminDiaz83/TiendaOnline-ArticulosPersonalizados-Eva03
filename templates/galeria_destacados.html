@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-3">{{ titulo }}</h1>
+    <p class="lead text-muted">{{ subtitulo }}</p>
+    <hr>
+
+    {% if exhibiciones %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for muestra in exhibiciones %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        
+                        <img src="{{ muestra.imagen_final.url }}" class="card-img-top" alt="Trabajo Terminado" style="height: 250px; object-fit: cover;">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">{{ muestra.pedido_referencia.producto_ref.nombre|default:"Producto Personalizado" }}</h5>
+                            
+                            <p class="card-text">
+                                <strong>Clasificación:</strong> 
+                                <span class="badge bg-warning text-dark fs-6">
+                                    {% if muestra.promedio_calificacion is not None %}
+                                        {{ muestra.promedio_calificacion|floatformat:1 }} ⭐
+                                    {% else %}
+                                        Sin Calificar
+                                    {% endif %}
+                                </span>
+                            </p>
+                            
+                            <p class="card-text small text-muted">{{ muestra.descripcion_publica|truncatechars:100 }}</p>
+                        </div>
+                        
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="{% url 'detalle_rastreo' muestra.pedido_referencia.token_Trakeo %}" class="btn btn-sm btn-outline-secondary">Ver Pedido Origen</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            Aún no hay trabajos terminados marcados para mostrar en la galería pública.
+        </div>
+    {% endif %}
+
+{% endblock %}

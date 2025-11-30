@@ -86,38 +86,7 @@ class pedidos(models.Model):
     def __str__(self):
         return f"Pedido de {self.nombre_cliente} - {self.producto_ref.nombre if self.producto_ref else 'Personalizado'}"
 
-class Exhibicion(models.Model):
-    
-    pedido_referencia = models.OneToOneField(
-        'pedidos', 
-        on_delete=models.CASCADE, 
-        related_name='exhibicion',
-        verbose_name='Pedido de Origen'
-    )
-    imagen_final = models.ImageField(
-        upload_to='galeria_trabajos/', 
-        verbose_name='Foto del Producto Terminado'
-    )
-    descripcion_publica = models.TextField(
-        verbose_name='Descripción para la Galería', 
-        help_text='Breve descripción de lo que se hizo.'
-    )
-    fecha_publicacion = models.DateTimeField(
-        auto_now_add=True, 
-        verbose_name='Fecha de Publicación'
-    )
-    mostrar_publicamente = models.BooleanField(
-        default=False, 
-        verbose_name='Mostrar en Web Pública'
-    )
 
-    def __str__(self):
-        return f"Muestra de {self.pedido_referencia.nombre_cliente} - Pedido #{self.pedido_referencia.id}"
-
-    def puntuacion_promedio(self):
-        from django.db.models import Avg
-        promedio = self.calificaciones.aggregate(Avg('puntuacion'))['puntuacion__avg']
-        return round(promedio, 1) if promedio else 0
     
 #de aca pa abajo es la funcionalidad nueva
 

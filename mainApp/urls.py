@@ -10,5 +10,6 @@ urlpatterns = [
     path('rastreo/<uuid:token>/', views.detalle_rastreo, name='detalle_rastreo'), 
     path('insumos/', views.lista_insumos, name='lista_insumos'),
     path('solicitar_producto/<int:pk>/', views.solicitar_producto_form, name='solicitar_producto'),
+    path('galeria/', views.galeria_destacados, name='galeria_destacados'),
     
 ]

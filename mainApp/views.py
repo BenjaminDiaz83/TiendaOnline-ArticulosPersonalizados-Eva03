@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.urls import reverse
-from .models import pedidos, Product, categoryProduct, insumos
+from .models import pedidos, Product, categoryProduct, insumos, Exhibicion, CalificacionPedido
+
 from .forms import SolicitudPedidoForm
 from django.contrib import messages
 
@@ -139,3 +140,15 @@ def lista_insumos(request):
     }
     
     return render(request, 'lista_insumos.html', context)
+
+def galeria_destacados(request):
+    Exhibiciones = Exhibicion.objects.filter(mostrar_publicamente=True).annotate(promedio_calificacion=Avg('calificaciones__puntuacion')).order_by(
+        '-promedio_calificacion', '-fecha_publicacion'
+
+    )
+    context = {
+        'exhibiciones': Exhibiciones,
+        'titulo': 'nuestra galeria de trabajos',
+        'subtitulo': 'lo mejor de nuestros pedidos, calificado por los clientes',
+    }
+    return render(request, 'galeria_destacados.html', context)
