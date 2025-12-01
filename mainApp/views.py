@@ -148,7 +148,7 @@ def galeria_destacados(request):
     )
     context = {
         'exhibiciones': Exhibiciones,
-        'titulo': 'nuestra galeria de trabajos',
-        'subtitulo': 'lo mejor de nuestros pedidos, calificado por los clientes',
+        'titulo': 'Galeria de Trabajos Realizados',
+        'subtitulo': 'Muestra de productos realizados, junto a la satisfacción de los clientes',
     }
     return render(request, 'galeria_destacados.html', context)
