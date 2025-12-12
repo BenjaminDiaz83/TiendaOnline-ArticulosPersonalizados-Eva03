@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.db.models import Q, Avg
+from django.db.models import Q, Avg, Count, F
+from django.contrib.auth.decorators import login_required   
 from django.urls import reverse
 from .models import pedidos, Product, categoryProduct, insumos, Exhibicion, CalificacionPedido
 
@@ -152,3 +153,23 @@ def galeria_destacados(request):
         'subtitulo': 'Muestra de productos realizados, junto a la satisfacción de los clientes',
     }
     return render(request, 'galeria_destacados.html', context)
+
+#eva 4 hacia abajo
+
+@login_required 
+def reporte_pedidos(request):
+    """
+    Vista protegida que genera el reporte de Pedidos por Estado.
+    Requiere que el usuario esté logueado.
+    """
+    
+    reporte_estados = pedidos.objects.values('estados').annotate(
+        cantidad=Count('estados')
+    ).order_by('-cantidad')
+
+    context = {
+        'reporte_estados': reporte_estados,
+        'title': 'Reporte de Pedidos'
+    }
+    
+    return render(request, 'mainApp/reporte_pedidos.html', context)
