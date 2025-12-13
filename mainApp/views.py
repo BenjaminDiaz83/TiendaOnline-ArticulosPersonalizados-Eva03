@@ -3,7 +3,7 @@ from django.db.models import Q, Avg, Count, F
 from django.contrib.auth.decorators import login_required   
 from django.urls import reverse
 from .models import pedidos, Product, categoryProduct, insumos, Exhibicion, CalificacionPedido
-
+from datetime import datetime, timedelta
 from .forms import SolicitudPedidoForm
 from django.contrib import messages
 
@@ -158,18 +158,53 @@ def galeria_destacados(request):
 
 @login_required 
 def reporte_pedidos(request):
-    """
-    Vista protegida que genera el reporte de Pedidos por Estado.
-    Requiere que el usuario esté logueado.
-    """
-    
-    reporte_estados = pedidos.objects.values('estados').annotate(
+
+    fecha_inicio_str = request.GET.get('fecha_inicio')
+    fecha_fin_str = request.GET.get('fecha_fin')
+    plataforma_seleccionada = request.GET.get('plataforma')
+
+    platform_choices = pedidos.PLATAFORMAS
+    hoy = datetime.now().date()
+    inicio_default = hoy - timedelta(days=30)
+
+    try:
+        fecha_inicio = datetime.strptime(fecha_inicio_str, '%Y-%m-%d').date() if fecha_inicio_str else inicio_default
+        fecha_fin = datetime.strptime(fecha_fin_str, '%Y-%m-%d').date() if fecha_fin_str else hoy
+    except ValueError:
+        fecha_inicio = inicio_default
+        fecha_fin = hoy
+
+    qs_filtrado = pedidos.objects.filter(
+        fecha_creacion__date__gte=fecha_inicio,
+        fecha_creacion__date__lte=fecha_fin
+    )
+    if plataforma_seleccionada:
+        qs_filtrado = qs_filtrado.filter(plataforma=plataforma_seleccionada)
+
+    reporte_estados = qs_filtrado.values('estados').annotate(
         cantidad=Count('estados')
     ).order_by('-cantidad')
+    estado_labels = dict(pedidos.ESTADOS)
+    for item in reporte_estados:
+        item['estados'] = estado_labels.get(item['estados'],'Desconocido')
+    pedidos_detallados = qs_filtrado.select_related('producto_ref').order_by('-fecha_creacion')
+    reporte_plataformas = qs_filtrado.values('plataforma').annotate(
+        cantidad=Count('plataforma')
+    ).order_by('-cantidad')
 
+    plataforma_labels = dict(pedidos.PLATAFORMAS)
+    for item in reporte_plataformas:
+        item['plataforma'] = plataforma_labels.get(item['plataforma'],'Desconocida')
+    
     context = {
         'reporte_estados': reporte_estados,
+        'reporte_plataformas': reporte_plataformas,
+        'fecha_inicio': fecha_inicio,
+        'fecha_fin': fecha_fin,
+        'plataforma_seleccionada': plataforma_seleccionada,
+        'platform_choices': platform_choices,
+        'pedidos_detallados': pedidos_detallados,
         'title': 'Reporte de Pedidos'
     }
-    
-    return render(request, 'mainApp/reporte_pedidos.html', context)
+    return render(request, 'reporte_pedidos.html', context)
+
