@@ -53,7 +53,6 @@ def detalle_producto(request, pk):
     
     return render(request, 'detalle_producto.html', context)
 
-
 def solicitar_producto_form(request, pk):
     """Nueva vista dedicada a manejar el formulario de solicitud de pedido."""
     
