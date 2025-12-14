@@ -14,7 +14,7 @@ MEDIA_DIR = os.path.join(BASE_DIR,'media')
 SECRET_KEY = 'django-insecure-^qw%wjmvth^=c8deybq+zljbbwt@wk!ttg)t92x^bl6_3%h$-='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False   
 
 ALLOWED_HOSTS = ['.onrender.com',  
     'tiendaonline-articulospersonalizados.onrender.com', 
