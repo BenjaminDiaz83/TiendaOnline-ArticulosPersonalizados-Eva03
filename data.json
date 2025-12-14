@@ -1,1 +1,1233 @@
-[{"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$1000000$0tDkaiHAtuF7ZqnTniBJet$V+mDNrGx5dMhcNfKDZG0FSe6Kv7nKPR9zo0xRCsdAXc=", "last_login": "2025-12-13T01:43:18.660Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "Admin@gmail.com", "is_staff": true, "is_active": true, "date_joined": "2025-11-17T14:20:55.482Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$1000000$yu5DzmsPGv517yEQdi9GmL$JByF3I/Bc70Hu8+32woFPQMEQqXNODzMluffCjwrKhM=", "last_login": null, "is_superuser": true, "username": "admin1", "first_name": "", "last_name": "", "email": "martin.gallegos04@inacapmail.cl", "is_staff": true, "is_active": true, "date_joined": "2025-12-14T00:45:40.699Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "9g8cy741rzrkyr4ynttrihs3h944d07a", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vMbjE:vvpaiMHD_s7ZhcAnO-H5-MdGpsQ1g7gW8QJ9p0yK5is", "expire_date": "2025-12-06T00:43:52.618Z"}}, {"model": "sessions.session", "pk": "cw28gfhxbx3t73rpwykk0qrfdgbmdi4i", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vUEfG:k_V037VhfYk6IP3mrf3PtO1_mT1lS5ZqVeHF03I_pEM", "expire_date": "2025-12-27T01:43:18.661Z"}}, {"model": "sessions.session", "pk": "h2f8c1yia4qasjbqwc1ommmhsn1ytvlz", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vTqjk:r36zOdTABrh6dFtcS6Ca5gpyhO2n2F5BxOcwWHPaa08", "expire_date": "2025-12-26T00:10:20.119Z"}}, {"model": "sessions.session", "pk": "oeznqk4l4psav6selu77vjzmgfo01e21", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vOMJ9:Z1OHy3iXdOLjxDjgtQl2Uz6Z3_X_Bt9M4MzhpKWxiI0", "expire_date": "2025-12-10T20:40:11.084Z"}}, {"model": "sessions.session", "pk": "z7zxlkrtgpx1xt7tuzkmwrmnpjnj7bcb", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vPSJE:WdwDek38NjSFKBqdAtuch2Ird2Rk6FdDpcxjoaYEAxw", "expire_date": "2025-12-13T21:16:48.179Z"}}, {"model": "mainApp.product", "pk": 2, "fields": {"nombre": "Vaso tematico", "description": "Vaso tematico con la posibilidad de añadirle el diseño de la serie que tu quieras.", "category": 1, "precio_base": "1800.00", "imagen1": "imagenes_productos/Vaso_tematico_rhawrvG.png", "imagen2": "", "imagen3": "", "destacado": false}}, {"model": "mainApp.product", "pk": 3, "fields": {"nombre": "Taza tematica", "description": "Taza tematica con la posibilidad de añadirle el diseño de la serie, videojuego o pelicula que quieras.", "category": 6, "precio_base": "4000.00", "imagen1": "imagenes_productos/Captura_de_pantalla_2025-11-29_164333_7uEnE0s.png", "imagen2": "", "imagen3": "", "destacado": false}}, {"model": "mainApp.product", "pk": 4, "fields": {"nombre": "Chapitas Tematicas", "description": "Un monton de chapitas las cuales puedes añadirle el diseño que quieras.", "category": 5, "precio_base": "400.00", "imagen1": "imagenes_productos/Captura_de_pantalla_2025-11-29_164202_mzha9BC.png", "imagen2": "", "imagen3": "", "destacado": true}}, {"model": "mainApp.product", "pk": 5, "fields": {"nombre": "Camiseta Tematica", "description": "Camiseta a la cual puedes añadirle el diseño que tu quieras.", "category": 2, "precio_base": "3000.00", "imagen1": "imagenes_productos/camisa_blanca_vxX53Ot.jpg", "imagen2": "", "imagen3": "", "destacado": true}}, {"model": "mainApp.categoryproduct", "pk": 1, "fields": {"nombre": "Vasos"}}, {"model": "mainApp.categoryproduct", "pk": 2, "fields": {"nombre": "Camisetas"}}, {"model": "mainApp.categoryproduct", "pk": 5, "fields": {"nombre": "Chapitas"}}, {"model": "mainApp.categoryproduct", "pk": 6, "fields": {"nombre": "Tazas"}}, {"model": "mainApp.insumos", "pk": 1, "fields": {"name": "Vinilo textil negro", "tipo": "Textil", "cantidad_disponible": 14, "unidad": "Metros", "marca": "Siser", "color": "Negro"}}, {"model": "mainApp.insumos", "pk": 2, "fields": {"name": "Taza Cerámica Blanca", "tipo": "Taza", "cantidad_disponible": 150, "unidad": "Unidades", "marca": "Muga", "color": "Blanco"}}, {"model": "mainApp.insumos", "pk": 3, "fields": {"name": "Polera Algodón Lisa", "tipo": "Camiseta", "cantidad_disponible": 50, "unidad": "Unidades", "marca": "Gildan", "color": "Blanco"}}, {"model": "mainApp.insumos", "pk": 4, "fields": {"name": "Vaso Acero Inoxidable", "tipo": "Vaso", "cantidad_disponible": 40, "unidad": "Unidades", "marca": "Stanley", "color": "Plateado"}}, {"model": "mainApp.insumos", "pk": 5, "fields": {"name": "Base para Chapita 58mm", "tipo": "Chapitas", "cantidad_disponible": 400, "unidad": "Unidades", "marca": "ButtonM", "color": "Plateado"}}, {"model": "mainApp.pedidos", "pk": 2, "fields": {"nombre_cliente": "dylan", "contacto": "12345678", "producto_ref": 2, "descripcion": "Solicitud basada en el producto: Vaso StarWars", "imagen": "imagenes_pedidos/anime-girl-face-mask-purple-eyes-twintails-hate-5k-79-2880x1800.jpg", "imagen_ref1": "", "imagen_ref2": "", "imagen_ref3": "", "imagenes_referencia": [], "fecha_creacion": "2025-11-26T20:46:25.799Z", "fecha_entrega": "2025-11-27", "plataforma": "website", "estados": "solicitado", "estado_pago": "pendiente", "token_Trakeo": "6fd7b1d1-9733-43d3-8634-dd42a80ea43a"}}, {"model": "mainApp.pedidos", "pk": 3, "fields": {"nombre_cliente": "DYLAN CAMPOS", "contacto": "12345666", "producto_ref": 2, "descripcion": "Solicitud basada en el producto: Vaso StarWars", "imagen": "", "imagen_ref1": "", "imagen_ref2": "", "imagen_ref3": "", "imagenes_referencia": [], "fecha_creacion": "2025-11-29T19:42:01.788Z", "fecha_entrega": "2025-11-30", "plataforma": "website", "estados": "solicitado", "estado_pago": "pendiente", "token_Trakeo": "ccb1bd98-31bd-4907-9318-38475f50cc3b"}}, {"model": "mainApp.pedidos", "pk": 6, "fields": {"nombre_cliente": "seba miranda", "contacto": "dog@gmail.com", "producto_ref": 2, "descripcion": "neko", "imagen": "", "imagen_ref1": "imagenes_pedidos/Captura_de_pantalla_2024-06-18_223647.png", "imagen_ref2": "imagenes_pedidos/Captura_de_pantalla_2024-10-17_155932.png", "imagen_ref3": "imagenes_pedidos/Captura_de_pantalla_2024-10-17_160650.png", "imagenes_referencia": [], "fecha_creacion": "2025-11-29T21:36:20.495Z", "fecha_entrega": "2025-12-03", "plataforma": "tiktok", "estados": "solicitado", "estado_pago": "pendiente", "token_Trakeo": "adce6cac-17a9-4757-b9e5-5ed5336e2b36"}}, {"model": "mainApp.pedidos", "pk": 7, "fields": {"nombre_cliente": "rosario", "contacto": "rosario@mail.cl", "producto_ref": 4, "descripcion": "Necesito con urgencia las chapitas", "imagen": "", "imagen_ref1": "imagenes_pedidos/anime-girl-face-mask-purple-eyes-twintails-hate-5k-79-2880x1800_1O56C3F.jpg", "imagen_ref2": "imagenes_pedidos/oleg-chursin-vaPoJZB9Mzg-unsplash_2SEoqTv.jpg", "imagen_ref3": "", "imagenes_referencia": [], "fecha_creacion": "2025-11-30T23:40:52.919Z", "fecha_entrega": "2025-11-30", "plataforma": "website", "estados": "solicitado", "estado_pago": "pendiente", "token_Trakeo": "353a944d-8d91-42c5-b10c-a9a0279a8fe2"}}, {"model": "mainApp.pedidos", "pk": 8, "fields": {"nombre_cliente": "wasd", "contacto": "wasd@mail.cl", "producto_ref": 2, "descripcion": "aslkdjlksajdlkasjdksajd", "imagen": "", "imagen_ref1": "", "imagen_ref2": "", "imagen_ref3": "", "imagenes_referencia": [], "fecha_creacion": "2025-11-30T23:55:19.304Z", "fecha_entrega": "2025-11-30", "plataforma": "website", "estados": "solicitado", "estado_pago": "pendiente", "token_Trakeo": "4664a26f-c782-4afb-b32a-f3c8c3f1757d"}}, {"model": "mainApp.exhibicion", "pk": 1, "fields": {"pedido_referencia": 2, "imagen_final": "galeria_trabajos/funny-discord-profile-pictures-atu6rn7y5p5rnjea.webp", "descripcion_publica": "hola mundo", "fecha_publicacion": "2025-11-30T02:31:54.148Z", "mostrar_publicamente": true}}, {"model": "mainApp.exhibicion", "pk": 2, "fields": {"pedido_referencia": 7, "imagen_final": "galeria_trabajos/anime-girl-face-mask-purple-eyes-twintails-hate-5k-79-2880x1800.jpg", "descripcion_publica": "producto entregado", "fecha_publicacion": "2025-11-30T23:43:08.048Z", "mostrar_publicamente": true}}, {"model": "mainApp.calificacionpedido", "pk": 1, "fields": {"exhibicion": 1, "puntuacion": 5, "comentario": "", "fecha_creacion": "2025-11-30T02:32:48.393Z"}}, {"model": "mainApp.calificacionpedido", "pk": 2, "fields": {"exhibicion": 2, "puntuacion": 5, "comentario": "excelente servicio", "fecha_creacion": "2025-11-30T23:43:47.326Z"}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2025-11-22T01:30:19.654Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "1", "object_repr": "asd", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2025-11-22T01:32:31.194Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "1", "object_repr": "Series", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nombre\"]}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2025-11-22T01:32:40.824Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2025-11-22T19:38:19.874Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "2", "object_repr": "Camisetas", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2025-11-22T19:40:08.449Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "1", "object_repr": "Vasos", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nombre\"]}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2025-11-22T19:41:56.552Z", "user": ["admin"], "content_type": ["mainApp", "insumos"], "object_id": "1", "object_repr": "Vinilo textil negro", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2025-11-22T19:51:53.679Z", "user": ["admin"], "content_type": ["mainApp", "pedidos"], "object_id": "1", "object_repr": "Pedido de Daniela - Vaso tematico", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2025-11-22T19:55:36.566Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2025-11-22T19:55:51.016Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2025-11-22T19:56:26.977Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2025-11-22T19:56:59.679Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen2\"]}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2025-11-22T19:57:04.407Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2025-11-22T19:57:10.943Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen2\"]}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2025-11-22T19:57:16.186Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2025-11-22T20:08:05.848Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Precio base\"]}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2025-11-22T20:13:07.237Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2025-11-22T20:13:10.998Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2025-11-22T20:13:17.033Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2025-11-22T20:15:00.973Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2025-11-22T20:15:05.292Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2025-11-22T20:15:11.122Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2025-11-26T20:40:48.707Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso StarWars", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2025-11-29T20:16:54.254Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "3", "object_repr": "Vaso tematico", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2025-11-29T20:17:01.644Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "3", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2025-11-29T20:17:07.153Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "4", "object_repr": "Camiseta Tematica", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2025-11-29T20:17:11.228Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "5", "object_repr": "Chapitas", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2025-11-29T20:17:29.158Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "4", "object_repr": "Camiseta Tematica", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2025-11-29T20:17:32.799Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "3", "object_repr": "Vaso tematico", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2025-11-29T20:17:43.502Z", "user": ["admin"], "content_type": ["mainApp", "categoryproduct"], "object_id": "6", "object_repr": "Tazas", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2025-11-29T20:18:08.300Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nombre\", \"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2025-11-29T20:18:14.172Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "1", "object_repr": "Vaso tematico", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2025-11-29T20:18:57.955Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "3", "object_repr": "Taza tematica", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2025-11-29T20:19:41.116Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "2", "object_repr": "Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Imagen1\"]}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2025-11-29T20:20:17.127Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "4", "object_repr": "Chapitas Tematicas", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2025-11-29T20:21:10.604Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "5", "object_repr": "Camiseta Tematica", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2025-11-29T20:23:06.164Z", "user": ["admin"], "content_type": ["mainApp", "insumos"], "object_id": "2", "object_repr": "Taza Cerámica Blanca", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2025-11-29T20:23:32.986Z", "user": ["admin"], "content_type": ["mainApp", "insumos"], "object_id": "3", "object_repr": "Polera Algodón Lisa", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2025-11-29T20:23:50.621Z", "user": ["admin"], "content_type": ["mainApp", "insumos"], "object_id": "4", "object_repr": "Vaso Acero Inoxidable", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2025-11-29T20:24:10.022Z", "user": ["admin"], "content_type": ["mainApp", "insumos"], "object_id": "5", "object_repr": "Base para Chapita 58mm", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2025-11-29T21:25:53.214Z", "user": ["admin"], "content_type": ["mainApp", "pedidos"], "object_id": "4", "object_repr": "Pedido de seba - Camiseta Tematica", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2025-11-29T21:37:38.735Z", "user": ["admin"], "content_type": ["mainApp", "pedidos"], "object_id": "5", "object_repr": "Pedido de juan - Chapitas Tematicas", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2025-11-30T02:01:30.400Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "5", "object_repr": "Camiseta Tematica", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Destacado\"]}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2025-11-30T02:31:54.149Z", "user": ["admin"], "content_type": ["mainApp", "exhibicion"], "object_id": "1", "object_repr": "Muestra de dylan - Pedido #2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2025-11-30T02:32:48.394Z", "user": ["admin"], "content_type": ["mainApp", "calificacionpedido"], "object_id": "1", "object_repr": "Calificación 5 para Muestra #1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 45, "fields": {"action_time": "2025-11-30T23:41:48.311Z", "user": ["admin"], "content_type": ["mainApp", "product"], "object_id": "4", "object_repr": "Chapitas Tematicas", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Destacado\"]}}]"}}, {"model": "admin.logentry", "pk": 46, "fields": {"action_time": "2025-11-30T23:43:08.049Z", "user": ["admin"], "content_type": ["mainApp", "exhibicion"], "object_id": "2", "object_repr": "Muestra de rosario - Pedido #7", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 47, "fields": {"action_time": "2025-11-30T23:43:47.327Z", "user": ["admin"], "content_type": ["mainApp", "calificacionpedido"], "object_id": "2", "object_repr": "Calificación 5 para Muestra #2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 48, "fields": {"action_time": "2025-12-13T02:21:32.585Z", "user": ["admin"], "content_type": ["mainApp", "pedidos"], "object_id": "6", "object_repr": "Pedido de seba miranda - Vaso tematico", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Plataforma\"]}}]"}}]
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$0tDkaiHAtuF7ZqnTniBJet$V+mDNrGx5dMhcNfKDZG0FSe6Kv7nKPR9zo0xRCsdAXc=",
+        "last_login": "2025-12-13T01:43:18.660Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "Admin@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-17T14:20:55.482Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$yu5DzmsPGv517yEQdi9GmL$JByF3I/Bc70Hu8+32woFPQMEQqXNODzMluffCjwrKhM=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin1",
+        "first_name": "",
+        "last_name": "",
+        "email": "martin.gallegos04@inacapmail.cl",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-14T00:45:40.699Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9g8cy741rzrkyr4ynttrihs3h944d07a",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vMbjE:vvpaiMHD_s7ZhcAnO-H5-MdGpsQ1g7gW8QJ9p0yK5is",
+        "expire_date": "2025-12-06T00:43:52.618Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cw28gfhxbx3t73rpwykk0qrfdgbmdi4i",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vUEfG:k_V037VhfYk6IP3mrf3PtO1_mT1lS5ZqVeHF03I_pEM",
+        "expire_date": "2025-12-27T01:43:18.661Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h2f8c1yia4qasjbqwc1ommmhsn1ytvlz",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vTqjk:r36zOdTABrh6dFtcS6Ca5gpyhO2n2F5BxOcwWHPaa08",
+        "expire_date": "2025-12-26T00:10:20.119Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "oeznqk4l4psav6selu77vjzmgfo01e21",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vOMJ9:Z1OHy3iXdOLjxDjgtQl2Uz6Z3_X_Bt9M4MzhpKWxiI0",
+        "expire_date": "2025-12-10T20:40:11.084Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "z7zxlkrtgpx1xt7tuzkmwrmnpjnj7bcb",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr30ZLSc8ZLNu7wQHkSHFSIe4OkVJA-2bmvVRM21rj1mWJE6uzMur0u-VUHtJ2wPfUbrMuc1uXKetd0Qft-jqzPC-H-3dQU6_fGsUaX8S5kAJmDAQWMHhKLKM3kK0xXIJlRhJv2TkwIwGVMAxAwqjeH8PDNwo:1vPSJE:WdwDek38NjSFKBqdAtuch2Ird2Rk6FdDpcxjoaYEAxw",
+        "expire_date": "2025-12-13T21:16:48.179Z"
+    }
+},
+{
+    "model": "mainApp.product",
+    "pk": 2,
+    "fields": {
+        "nombre": "Vaso tematico",
+        "description": "Vaso tematico con la posibilidad de añadirle el diseño de la serie que tu quieras.",
+        "category": 1,
+        "precio_base": "1800.00",
+        "imagen1": "imagenes_productos/Vaso_tematico_rhawrvG.png",
+        "imagen2": "",
+        "imagen3": "",
+        "destacado": false
+    }
+},
+{
+    "model": "mainApp.product",
+    "pk": 3,
+    "fields": {
+        "nombre": "Taza tematica",
+        "description": "Taza tematica con la posibilidad de añadirle el diseño de la serie, videojuego o pelicula que quieras.",
+        "category": 6,
+        "precio_base": "4000.00",
+        "imagen1": "imagenes_productos/Captura_de_pantalla_2025-11-29_164333_7uEnE0s.png",
+        "imagen2": "",
+        "imagen3": "",
+        "destacado": false
+    }
+},
+{
+    "model": "mainApp.product",
+    "pk": 4,
+    "fields": {
+        "nombre": "Chapitas Tematicas",
+        "description": "Un monton de chapitas las cuales puedes añadirle el diseño que quieras.",
+        "category": 5,
+        "precio_base": "400.00",
+        "imagen1": "imagenes_productos/Captura_de_pantalla_2025-11-29_164202_mzha9BC.png",
+        "imagen2": "",
+        "imagen3": "",
+        "destacado": true
+    }
+},
+{
+    "model": "mainApp.product",
+    "pk": 5,
+    "fields": {
+        "nombre": "Camiseta Tematica",
+        "description": "Camiseta a la cual puedes añadirle el diseño que tu quieras.",
+        "category": 2,
+        "precio_base": "3000.00",
+        "imagen1": "imagenes_productos/camisa_blanca_vxX53Ot.jpg",
+        "imagen2": "",
+        "imagen3": "",
+        "destacado": true
+    }
+},
+{
+    "model": "mainApp.categoryproduct",
+    "pk": 1,
+    "fields": {
+        "nombre": "Vasos"
+    }
+},
+{
+    "model": "mainApp.categoryproduct",
+    "pk": 2,
+    "fields": {
+        "nombre": "Camisetas"
+    }
+},
+{
+    "model": "mainApp.categoryproduct",
+    "pk": 5,
+    "fields": {
+        "nombre": "Chapitas"
+    }
+},
+{
+    "model": "mainApp.categoryproduct",
+    "pk": 6,
+    "fields": {
+        "nombre": "Tazas"
+    }
+},
+{
+    "model": "mainApp.insumos",
+    "pk": 1,
+    "fields": {
+        "name": "Vinilo textil negro",
+        "tipo": "Textil",
+        "cantidad_disponible": 14,
+        "unidad": "Metros",
+        "marca": "Siser",
+        "color": "Negro"
+    }
+},
+{
+    "model": "mainApp.insumos",
+    "pk": 2,
+    "fields": {
+        "name": "Taza Cerámica Blanca",
+        "tipo": "Taza",
+        "cantidad_disponible": 150,
+        "unidad": "Unidades",
+        "marca": "Muga",
+        "color": "Blanco"
+    }
+},
+{
+    "model": "mainApp.insumos",
+    "pk": 3,
+    "fields": {
+        "name": "Polera Algodón Lisa",
+        "tipo": "Camiseta",
+        "cantidad_disponible": 50,
+        "unidad": "Unidades",
+        "marca": "Gildan",
+        "color": "Blanco"
+    }
+},
+{
+    "model": "mainApp.insumos",
+    "pk": 4,
+    "fields": {
+        "name": "Vaso Acero Inoxidable",
+        "tipo": "Vaso",
+        "cantidad_disponible": 40,
+        "unidad": "Unidades",
+        "marca": "Stanley",
+        "color": "Plateado"
+    }
+},
+{
+    "model": "mainApp.insumos",
+    "pk": 5,
+    "fields": {
+        "name": "Base para Chapita 58mm",
+        "tipo": "Chapitas",
+        "cantidad_disponible": 400,
+        "unidad": "Unidades",
+        "marca": "ButtonM",
+        "color": "Plateado"
+    }
+},
+{
+    "model": "mainApp.pedidos",
+    "pk": 2,
+    "fields": {
+        "nombre_cliente": "dylan",
+        "contacto": "12345678",
+        "producto_ref": 2,
+        "descripcion": "Solicitud basada en el producto: Vaso StarWars",
+        "imagen": "imagenes_pedidos/anime-girl-face-mask-purple-eyes-twintails-hate-5k-79-2880x1800.jpg",
+        "imagen_ref1": "",
+        "imagen_ref2": "",
+        "imagen_ref3": "",
+        "imagenes_referencia": [],
+        "fecha_creacion": "2025-11-26T20:46:25.799Z",
+        "fecha_entrega": "2025-11-27",
+        "plataforma": "website",
+        "estados": "solicitado",
+        "estado_pago": "pendiente",
+        "token_Trakeo": "6fd7b1d1-9733-43d3-8634-dd42a80ea43a"
+    }
+},
+{
+    "model": "mainApp.pedidos",
+    "pk": 3,
+    "fields": {
+        "nombre_cliente": "DYLAN CAMPOS",
+        "contacto": "12345666",
+        "producto_ref": 2,
+        "descripcion": "Solicitud basada en el producto: Vaso StarWars",
+        "imagen": "",
+        "imagen_ref1": "",
+        "imagen_ref2": "",
+        "imagen_ref3": "",
+        "imagenes_referencia": [],
+        "fecha_creacion": "2025-11-29T19:42:01.788Z",
+        "fecha_entrega": "2025-11-30",
+        "plataforma": "website",
+        "estados": "solicitado",
+        "estado_pago": "pendiente",
+        "token_Trakeo": "ccb1bd98-31bd-4907-9318-38475f50cc3b"
+    }
+},
+{
+    "model": "mainApp.pedidos",
+    "pk": 6,
+    "fields": {
+        "nombre_cliente": "seba miranda",
+        "contacto": "dog@gmail.com",
+        "producto_ref": 2,
+        "descripcion": "neko",
+        "imagen": "",
+        "imagen_ref1": "imagenes_pedidos/Captura_de_pantalla_2024-06-18_223647.png",
+        "imagen_ref2": "imagenes_pedidos/Captura_de_pantalla_2024-10-17_155932.png",
+        "imagen_ref3": "imagenes_pedidos/Captura_de_pantalla_2024-10-17_160650.png",
+        "imagenes_referencia": [],
+        "fecha_creacion": "2025-11-29T21:36:20.495Z",
+        "fecha_entrega": "2025-12-03",
+        "plataforma": "tiktok",
+        "estados": "solicitado",
+        "estado_pago": "pendiente",
+        "token_Trakeo": "adce6cac-17a9-4757-b9e5-5ed5336e2b36"
+    }
+},
+{
+    "model": "mainApp.pedidos",
+    "pk": 7,
+    "fields": {
+        "nombre_cliente": "rosario",
+        "contacto": "rosario@mail.cl",
+        "producto_ref": 4,
+        "descripcion": "Necesito con urgencia las chapitas",
+        "imagen": "",
+        "imagen_ref1": "imagenes_pedidos/anime-girl-face-mask-purple-eyes-twintails-hate-5k-79-2880x1800_1O56C3F.jpg",
+        "imagen_ref2": "imagenes_pedidos/oleg-chursin-vaPoJZB9Mzg-unsplash_2SEoqTv.jpg",
+        "imagen_ref3": "",
+        "imagenes_referencia": [],
+        "fecha_creacion": "2025-11-30T23:40:52.919Z",
+        "fecha_entrega": "2025-11-30",
+        "plataforma": "website",
+        "estados": "solicitado",
+        "estado_pago": "pendiente",
+        "token_Trakeo": "353a944d-8d91-42c5-b10c-a9a0279a8fe2"
+    }
+},
+{
+    "model": "mainApp.pedidos",
+    "pk": 8,
+    "fields": {
+        "nombre_cliente": "wasd",
+        "contacto": "wasd@mail.cl",
+        "producto_ref": 2,
+        "descripcion": "aslkdjlksajdlkasjdksajd",
+        "imagen": "",
+        "imagen_ref1": "",
+        "imagen_ref2": "",
+        "imagen_ref3": "",
+        "imagenes_referencia": [],
+        "fecha_creacion": "2025-11-30T23:55:19.304Z",
+        "fecha_entrega": "2025-11-30",
+        "plataforma": "website",
+        "estados": "solicitado",
+        "estado_pago": "pendiente",
+        "token_Trakeo": "4664a26f-c782-4afb-b32a-f3c8c3f1757d"
+    }
+},
+{
+    "model": "mainApp.exhibicion",
+    "pk": 1,
+    "fields": {
+        "pedido_referencia": 2,
+        "imagen_final": "galeria_trabajos/funny-discord-profile-pictures-atu6rn7y5p5rnjea.webp",
+        "descripcion_publica": "hola mundo",
+        "fecha_publicacion": "2025-11-30T02:31:54.148Z",
+        "mostrar_publicamente": true
+    }
+},
+{
+    "model": "mainApp.exhibicion",
+    "pk": 2,
+    "fields": {
+        "pedido_referencia": 7,
+        "imagen_final": "galeria_trabajos/anime-girl-face-mask-purple-eyes-twintails-hate-5k-79-2880x1800.jpg",
+        "descripcion_publica": "producto entregado",
+        "fecha_publicacion": "2025-11-30T23:43:08.048Z",
+        "mostrar_publicamente": true
+    }
+},
+{
+    "model": "mainApp.calificacionpedido",
+    "pk": 1,
+    "fields": {
+        "exhibicion": 1,
+        "puntuacion": 5,
+        "comentario": "",
+        "fecha_creacion": "2025-11-30T02:32:48.393Z"
+    }
+},
+{
+    "model": "mainApp.calificacionpedido",
+    "pk": 2,
+    "fields": {
+        "exhibicion": 2,
+        "puntuacion": 5,
+        "comentario": "excelente servicio",
+        "fecha_creacion": "2025-11-30T23:43:47.326Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-11-22T01:30:19.654Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "1",
+        "object_repr": "asd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-11-22T01:32:31.194Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "1",
+        "object_repr": "Series",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-11-22T01:32:40.824Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-11-22T19:38:19.874Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "2",
+        "object_repr": "Camisetas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-11-22T19:40:08.449Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "1",
+        "object_repr": "Vasos",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-11-22T19:41:56.552Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "insumos"
+        ],
+        "object_id": "1",
+        "object_repr": "Vinilo textil negro",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-11-22T19:51:53.679Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "pedidos"
+        ],
+        "object_id": "1",
+        "object_repr": "Pedido de Daniela - Vaso tematico",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-11-22T19:55:36.566Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-11-22T19:55:51.016Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-11-22T19:56:26.977Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-11-22T19:56:59.679Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-11-22T19:57:04.407Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-11-22T19:57:10.943Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-11-22T19:57:16.186Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-11-22T20:08:05.848Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Precio base\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-11-22T20:13:07.237Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-11-22T20:13:10.998Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-11-22T20:13:17.033Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-11-22T20:15:00.973Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-11-22T20:15:05.292Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-11-22T20:15:11.122Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-11-26T20:40:48.707Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso StarWars",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-11-29T20:16:54.254Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "3",
+        "object_repr": "Vaso tematico",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-11-29T20:17:01.644Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "3",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-11-29T20:17:07.153Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "4",
+        "object_repr": "Camiseta Tematica",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-11-29T20:17:11.228Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "5",
+        "object_repr": "Chapitas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-11-29T20:17:29.158Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "4",
+        "object_repr": "Camiseta Tematica",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-11-29T20:17:32.799Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "3",
+        "object_repr": "Vaso tematico",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-11-29T20:17:43.502Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "categoryproduct"
+        ],
+        "object_id": "6",
+        "object_repr": "Tazas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-11-29T20:18:08.300Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre\", \"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-11-29T20:18:14.172Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Vaso tematico",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-11-29T20:18:57.955Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "Taza tematica",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-11-29T20:19:41.116Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Imagen1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-11-29T20:20:17.127Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Chapitas Tematicas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-11-29T20:21:10.604Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Camiseta Tematica",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-11-29T20:23:06.164Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "insumos"
+        ],
+        "object_id": "2",
+        "object_repr": "Taza Cerámica Blanca",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-11-29T20:23:32.986Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "insumos"
+        ],
+        "object_id": "3",
+        "object_repr": "Polera Algodón Lisa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-11-29T20:23:50.621Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "insumos"
+        ],
+        "object_id": "4",
+        "object_repr": "Vaso Acero Inoxidable",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-11-29T20:24:10.022Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "insumos"
+        ],
+        "object_id": "5",
+        "object_repr": "Base para Chapita 58mm",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-11-29T21:25:53.214Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "pedidos"
+        ],
+        "object_id": "4",
+        "object_repr": "Pedido de seba - Camiseta Tematica",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-11-29T21:37:38.735Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "pedidos"
+        ],
+        "object_id": "5",
+        "object_repr": "Pedido de juan - Chapitas Tematicas",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-11-30T02:01:30.400Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "Camiseta Tematica",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Destacado\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-11-30T02:31:54.149Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "exhibicion"
+        ],
+        "object_id": "1",
+        "object_repr": "Muestra de dylan - Pedido #2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-11-30T02:32:48.394Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "calificacionpedido"
+        ],
+        "object_id": "1",
+        "object_repr": "Calificación 5 para Muestra #1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-11-30T23:41:48.311Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Chapitas Tematicas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Destacado\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-11-30T23:43:08.049Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "exhibicion"
+        ],
+        "object_id": "2",
+        "object_repr": "Muestra de rosario - Pedido #7",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-11-30T23:43:47.327Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "calificacionpedido"
+        ],
+        "object_id": "2",
+        "object_repr": "Calificación 5 para Muestra #2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-12-13T02:21:32.585Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "mainApp",
+            "pedidos"
+        ],
+        "object_id": "6",
+        "object_repr": "Pedido de seba miranda - Vaso tematico",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Plataforma\"]}}]"
+    }
+}
+]
