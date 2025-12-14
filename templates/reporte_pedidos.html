@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="mb-4 text-primary">Reporte Dinámico de Pedidos</h1>
+    <h1 class="mb-4 text-primary"> Reporte Dinámico de Pedidos</h1>
 
     <div class="card mb-4 shadow-sm">
         <div class="card-header bg-primary text-white">
-        Opciones de Personalización
+            Opciones de Personalización
         </div>
         <div class="card-body">
             <form method="GET" class="row align-items-end">
@@ -36,45 +36,86 @@
                 </div>
                 
             </form>
-            <p class="text-muted small mt-2">Mostrando datos desde el {{ fecha_inicio }} hasta el {{ fecha_fin }}</p>
+            <p class="text-muted small mt-2">Mostrando datos desde el {{ fecha_inicio }} hasta el {{ fecha_fin }}.</p>
         </div>
     </div>
     
+    <hr class="my-5"> 
+
+    <h2 class="mb-3 text-secondary"> Resumen de Pedidos por Agrupación</h2>
+    <div class="row mb-5">
+        
+        <div class="col-md-6">
+            <div class="card shadow h-100">
+                <div class="card-header bg-success text-white">
+                    <h2 class="h5 mb-0">Distribución por Plataforma</h2>
+                </div>
+                <div class="card-body text-center d-flex justify-content-center align-items-center">
+                    {% if plataforma_chart_img %}
+                        <img src="{{ plataforma_chart_img }}" alt="Gráfico de Plataformas" class="img-fluid" style="max-height: 350px;">
+                    {% else %}
+                        <p class="text-muted">No hay datos para mostrar el gráfico.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow h-100">
+                <div class="card-header bg-secondary text-white">
+                    <h2 class="h5 mb-0">Distribución por Estado del Pedido</h2>
+                </div>
+                <div class="card-body text-center d-flex justify-content-center align-items-center">
+                    {% if estados_chart_img %}
+                        <img src="{{ estados_chart_img }}" alt="Gráfico de Estados" class="img-fluid" style="max-height: 350px;">
+                    {% else %}
+                        <p class="text-muted">No hay datos para mostrar el gráfico.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="my-5">
+
+    <h2 class="mb-3 text-secondary"> Detalle de Pedidos Filtrados</h2>
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow">
                 <div class="card-header bg-info text-white">
-                    <h2 class="h5 mb-0">Detalle de Pedidos Filtrados</h2>
+                    <h2 class="h5 mb-0">Listado Completo de Pedidos</h2>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th>ID Pedido</th>
-                                <th>Cliente</th>
-                                <th>Fecha Creación</th>
-                                <th>Plataforma</th>
-                                <th>Estado</th>
-                                <th>Producto Ref.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for pedido in pedidos_detallados %}
-                            <tr>
-                                <td>{{ pedido.id }}</td>
-                                <td><strong>{{ pedido.nombre_cliente }}</strong></td>
-                                <td>{{ pedido.fecha_creacion|date:"Y-m-d" }}</td>
-                                <td>{{ pedido.get_plataforma_display }}</td>
-                                <td>{{ pedido.get_estados_display }}</td>
-                                <td>{{ pedido.producto_ref.nombre|default:"Personalizado" }}</td>
-                            </tr>
-                            {% empty %}
-                            <tr>
-                                <td colspan="6" class="text-center">No hay pedidos detallados en el rango seleccionado.</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Fecha Creación</th>
+                                    <th>Plataforma</th>
+                                    <th>Estado</th>
+                                    <th>Producto Ref.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for pedido in pedidos_detallados %}
+                                <tr>
+                                    <td>{{ pedido.id }}</td>
+                                    <td><strong>{{ pedido.nombre_cliente }}</strong></td>
+                                    <td>{{ pedido.fecha_creacion|date:"Y-m-d" }}</td>
+                                    <td>{{ pedido.get_plataforma_display }}</td>
+                                    <td>{{ pedido.get_estados_display }}</td>
+                                    <td>{{ pedido.producto_ref.nombre|default:"Personalizado" }}</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="6" class="text-center">No hay pedidos detallados en el rango seleccionado.</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
