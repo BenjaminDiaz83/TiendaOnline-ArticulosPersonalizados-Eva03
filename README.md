@@ -18,6 +18,7 @@ Primeros pasos:
 
 
 Despliegue del Render (Todo ejecutado en el start command de render)
+
 1.- Preparacion de la base de datos
    python manage.py migrate
 
