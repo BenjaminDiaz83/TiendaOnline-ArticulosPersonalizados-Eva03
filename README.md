@@ -15,3 +15,14 @@ Primeros pasos:
 
 3) Correr el servidor
    python manage.py runserver
+
+
+Despliegue del Render (Todo ejecutado en el start command de render)
+1.- Preparacion de la base de datos
+   python manage.py migrate
+
+2.- Creacion de administrador
+   python manage.py shell -c "exec(open('create_admin.py').read())"
+
+3.- Inicio del servidor web
+   gunicorn DemoTiendaOnline.wsgi
