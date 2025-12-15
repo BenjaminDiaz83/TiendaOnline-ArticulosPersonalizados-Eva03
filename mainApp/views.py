@@ -67,7 +67,7 @@ def solicitar_producto_form(request, pk):
             
             
             nuevo_pedido.producto_ref = producto
-            nuevo_pedido.plataforma = 'website'
+            
             nuevo_pedido.estados = 'solicitado' 
             nuevo_pedido.estado_pago = 'pendiente' 
             
